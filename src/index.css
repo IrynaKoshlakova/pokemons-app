@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  font-family: Verdana, sans-serif;  
+}
+
+.header {
+  height: 80px;
+  background: #201D2A; 
+  position: relative;
+}
+
+.logoLink {
+  display: table;
+  width: 176px;
+  height: 30px;
+  position: absolute;
+  left: 35%; 
+  top: -34%; 
+  cursor: pointer;
+}
+
+.heartLink {
+  display: table;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  right: 6%;
+  top: 22%;  
+  cursor: pointer;
+}
+
+.arrowLink {  
+  width: 46px;
+  height: 46px;
+  position: absolute;
+  left: 6%;
+  top: 22%;  
+  cursor: pointer;
+  text-align: center;
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 700;
+  background-color: transparent;
+  color: #fff;
+}
+
+.logoImg, .heartImg {
+  width: 100%;
+  height: 100%;  
+}  
+
+/* .heartImg {
+  color: #fff;
+  font-size: 42px;
+  line-height: 1;
+  font-weight: 700;       
+} */
+
+.wrapper {
+  max-width: 1440px;
+  min-width: 600px; 
+}
+
+main {
+  min-height: 600px; 
+  border: 1 ps solid blue; 
+}
+
+.pokemonsBlock {
+  min-height: 600px;
+  padding: 6% 6%; 
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;  
+}
+
+.pokemonCardWrapper {
+  width: 47%;     
+  margin: 0 5% 40px 0;
+  height: 30%; 
+}
+
+.pokemonCard {
+  width: 100%;
+  margin-bottom: 40px;    
+  flex: 1;   
+}
+
+.pokemonCardWrapper:nth-child(2n) {
+  margin: 0 0 40px 0;
+}
+
+.pokemonCardImageWrapper {  
+  width: 100%;
+  height: auto;
+  padding: 9%;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  background-color: #F2F2F2;
+}
+
+.pokemonCardImageLink {
+  display: block; 
+  width: 65%;
+  height: 65%;
+  cursor: pointer;  
+}
+
+.pokemonCardImage {
+  width: 100%;
+  height: 100%;
+}
+
+.pokemonCardInfoBlock {  
+  padding:  0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  border: 1px solid #F2F2F2;   
+}
+
+.pokemonCardInfo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}
+
+.pokemonCardTitle {  
+  color: #201D2A;  
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.pokemonCardBtnDark {  
+  display: table;
+  width: 44px;
+  height: 52px;
+  padding-left: 5%;
+  text-align: center;
+  font-size: 36px;
+  line-height: 1;  
+  font-weight: 500;
+  background: transparent;
+  color: #201D2A;
+  border: none;
+  outline: none; 
+  cursor: pointer;   
+}
+
+.pokemonCardBtnRed {  
+  display: table;
+  width: 44px;
+  height: 52px;
+  padding-left: 5%;
+  text-align: center;
+  font-size: 36px;
+  line-height: 1;  
+  font-weight: 800;
+  background: transparent;
+  color: #ff0000;
+  border: none;
+  outline: none; 
+  cursor: pointer;     
+}
+
+.detailsPageImageBlock {
+  width: 100%;
+  height: 460px;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:  #F2F2F2;
+}
+
+.detailsPageImage {
+  width: 280px;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+.detailsPageTitle {
+  font-size: 2.2em;
+  font-weight: 700;
+  line-height: 24px;
+  color: #201D2A; 
+}
+
+.detailsPagePropertiesBlock {
+  width: 100%;  
+  margin-bottom: 50px;
+  padding: 0 6% 50px 6%;
+  background: #fff;
+}
+
+.detailsLine {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  height: 56px;
+  border-bottom: 2px solid #F2F2F2;
+}
+
+.pokemonProperty, .pokemonPropertyValue  {    
+  font-size: 1.6em;
+  font-weight: 500;
+  line-height: 20px;
+  color: #201D2A;
+}
+
+.pokemonPropertyValue {  
+  font-weight: 700; 
+}
+
+.detailsPageBtnAdd {
+  width: 100%;
+  height: 80px;
+  outline: none;
+  border: 2px solid #7EB57E;
+  background: #7EB57E;
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.7em;
+  font-weight: 700;
+  line-height: 50px;
+  margin-top: 60px;
+}
+
+.detailsPageBtnRemove {
+  width: 100%;
+  height: 80px;
+  outline: none;
+  border: 2px solid #7EB57E;
+  background: transparent;
+  border-radius: 8px;
+  text-align: center;
+  color:#7EB57E;
+  font-size: 1.7em;
+  font-weight: 700;
+  line-height: 20px;
+  margin-top: 60px;
+}
+
+.noFavoritesText {
+  text-align: center;
+  font-size: 2.7em;
+  color: silver;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+ 
+
+
