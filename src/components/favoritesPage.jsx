@@ -17,13 +17,7 @@ const FavoritesPage = (props) => {
     
     console.log("favoritesPage - favorites", favorites);   
     
-    useEffect(() => {  
-        if(favorites === []) return;
-        const getStorage = localStorage.getItem("myFavorites");          
-        return JSON.parse(getStorage);         
-                           
-    }, [favorites]);
-    
+        
    
     return (      
         <>  

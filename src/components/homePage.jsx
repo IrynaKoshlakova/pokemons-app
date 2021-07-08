@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { requestPokemons, requestMorePokemons } from '../redux/actions';
-//import InfiniteScroll from 'react-infinite-scroll-component';
+import InfiniteScroll from 'react-infinite-scroll-component';
 import { useSelector, useDispatch } from 'react-redux';
 import Layout from './layout';
 import HomePageHeader from './homePageHeader';
@@ -30,8 +30,8 @@ const HomePage = (props) => {
             <Layout>
                 <HomePageHeader/>               
                 <main>  
-                   <PokemonsList pokemons={pokemons}  />                  
-                        {/* <InfiniteScroll
+                                     
+                        <InfiniteScroll
                             dataLength={pokemons.length}
                             next={() => dispatch(requestMorePokemons())}
                             hasMore={hasMore}
@@ -44,7 +44,7 @@ const HomePage = (props) => {
                         
                             <PokemonsList pokemons={pokemons}  />
                     
-                        </InfiniteScroll>                       */}
+                        </InfiniteScroll>                       
                 </main>
             </Layout>
         </>

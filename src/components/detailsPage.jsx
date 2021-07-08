@@ -30,9 +30,7 @@ const DetailsPage = (props) => {
         }
         const pokemonAlreadyAdded = favorites.find(item => item.name === selectedPokemon.name);
         if(pokemonAlreadyAdded) return;       
-        dispatch(addToFavorites(selectedPokemon));        
-        localStorage.setItem("myFavorites", JSON.stringify(favorites));
-                           
+        dispatch(addToFavorites(selectedPokemon));                                
     }
 
     const removePokemon = () => {                                 
