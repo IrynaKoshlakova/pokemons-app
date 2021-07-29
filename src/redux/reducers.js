@@ -2,8 +2,7 @@ const initialState = {
     pokemons: [], 
     favorites: [],
     pokemon: {},    
-    loading: false,
-    hasMore: true,    
+    loading: false,       
 };
 
 
@@ -23,20 +22,8 @@ export const pokemonsReducer = (state = initialState, action) => {
                 loading: false
             }         
         }
-        case 'REQUEST_MORE_POKEMONS': {
-            return {
-                ...state,
-                loading: true,                                
-            }
-        }
-        case 'REQUEST_MORE_POKEMONS_SUCCESS': {                   
-            return {
-                ...state,                 
-                pokemons: [...state.pokemons, ...action.pokemons],                  
-                loading: false                           
-            }         
-        }
-    
+       
+            
         case 'ERROR_POKEMONS': {
             return {
                 ...state,                
@@ -58,15 +45,8 @@ export const pokemonsReducer = (state = initialState, action) => {
                 loading: false
             }         
         }
-       
-      
-        case 'SET_SCROLL': {
-            return {
-                ...state,
-                hasMore: action.hasMore
-            }
-        }  
-        
+             
+               
         case 'ADD_TO_FAVORITES': {             
             return {
                 ...state,

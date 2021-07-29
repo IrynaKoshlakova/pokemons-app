@@ -244,6 +244,7 @@ main {
   font-weight: 700;
   line-height: 50px;
   margin-top: 60px;
+  cursor: pointer;
 }
 
 .detailsPageBtnRemove {
@@ -259,6 +260,7 @@ main {
   font-weight: 700;
   line-height: 20px;
   margin-top: 60px;
+  cursor: pointer;
 }
 
 .noFavoritesText {

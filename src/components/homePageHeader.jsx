@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import imgLogo from './images/pokemon-logo-200px.png';
-//import { FaRegHeart } from 'react-icons/fa';
 import imgHeart from './images/white-heart.png';
 
 

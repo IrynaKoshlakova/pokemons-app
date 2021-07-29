@@ -1,6 +1,5 @@
 import React, {useEffect } from 'react';
 import { Link } from 'react-router-dom';
-//import Loader from "react-loader-spinner";
 import InfiniteScroll from 'react-infinite-scroll-component';
 import {useSelector, useDispatch} from 'react-redux';
 import Layout from './layout';

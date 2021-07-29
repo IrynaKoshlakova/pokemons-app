@@ -1,14 +1,11 @@
-import {
-    requestMorePokemonsSuccess, requestPokemonsSuccess, requestPokemonSuccess,
-    errorPokemons, setScroll
-} from './actions';
-import { takeLatest, call, put, all, select } from 'redux-saga/effects';
-
+import { requestPokemonsSuccess, requestPokemonSuccess,
+    errorPokemons } from './actions';
+import { takeLatest, call, put, all } from 'redux-saga/effects';
 
 
 
 export async function requestToServer() {
-    const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=12`);
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=40`);
     const data = await response.json();
     return data;
 }
@@ -33,27 +30,6 @@ function* requestPokemonsSaga(action) {
     }
 }
 
-function* requestMorePokemonsSaga(action) {
-    try {  
-        const requestedData = yield call(requestToServer, action);       
-        
-        let hasMore = yield select((store) => store.pokemons.hasMore);
-        let pokemons = yield select((store) => store.pokemons.pokemons);
-        yield put(requestMorePokemonsSuccess(requestedData.results));
-        if (pokemons.length < requestedData.count) {
-            hasMore = true;
-        } else {
-            hasMore = false;
-        }
-        yield put(setScroll(hasMore));
-
-        console.log("pokemons.length", pokemons.length);
-        console.log("requestedData.count", requestedData.count);
-        console.log("hasMore", hasMore);
-    } catch (error) {
-        yield put(errorPokemons());
-    }
-}
 
 function* requestPokemonSaga(action) {
     try {
@@ -69,9 +45,6 @@ const requestPokemonsSubscribe = () => {
     return takeLatest('REQUEST_POKEMONS', requestPokemonsSaga);
 }
 
-const requestMorePokemonsSubscribe = () => {
-    return takeLatest('REQUEST_MORE_POKEMONS', requestMorePokemonsSaga);
-}
 
 const requestPokemonSubscribe = () => {
     return takeLatest('REQUEST_POKEMON', requestPokemonSaga);
@@ -79,6 +52,6 @@ const requestPokemonSubscribe = () => {
 
 export function* pokemonsSagas() {
     yield all([
-        requestPokemonsSubscribe(), requestMorePokemonsSubscribe(), requestPokemonSubscribe()
+        requestPokemonsSubscribe(),  requestPokemonSubscribe()
     ]);
 }

@@ -9,17 +9,6 @@ export const requestPokemonsSuccess = (pokemons) => ({
 });
 
 
-export const requestMorePokemons = () => ({
-    type: 'REQUEST_MORE_POKEMONS',     
-});
-
-
-export const requestMorePokemonsSuccess = (pokemons) => ({
-    type: 'REQUEST_MORE_POKEMONS_SUCCESS',    
-    pokemons       
-});
-
-
 export const errorPokemons = () => ({
     type: 'ERROR_POKEMONS',    
 });
@@ -52,8 +41,4 @@ export const removeFromFavorites = (name) => ({
 });
 
 
-export const setScroll = (hasMore) => ({
-    type: 'SET_SCROLL',
-    payload: hasMore  
-});
 
